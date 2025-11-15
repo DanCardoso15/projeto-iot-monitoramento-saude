@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "author": "Danilo Cardoso",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer1",
+      "top": 100,
+      "left": 250,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [
+      "esp:13",
+      "buzzer1:1",
+      "purple",
+      []
+    ],
+    [
+      "esp:GND",
+      "buzzer1:2",
+      "black",
+      [
+        "gnd"
+      ]
+    ],
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ]
+  ],
+  "dependencies": {}
+}
